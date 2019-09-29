@@ -1,3 +1,5 @@
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <div><%= link_to post.title, post_path(post) %></div>
+  #this will automatically use the post id attribute
+  #the reason you can use post is because resouces in the routes.rb automatically assigned the routes methods for you
 <% end %>
